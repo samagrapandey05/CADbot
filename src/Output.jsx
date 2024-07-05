@@ -1,4 +1,3 @@
-import { StlViewer } from 'react-stl-file-viewer'
 import { useState } from 'react'
 
 function Output(props) {
