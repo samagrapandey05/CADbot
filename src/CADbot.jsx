@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 //import opencascadeWasm from "opencascade.js/dist/opencascade.full.wasm?url"
 //import { visualizeShapes } from "./visualize.js"; 
 import {createCube, createSphere, createCone, createPyramid, createBox, createCylinder, createTorus, createWedge/*, createCustom*/} from './createShapes.js'
-import "@google/model-viewer";
+import "../node_modules/@google/model-viewer";
 
 function CadBot(props) {
     /* 
