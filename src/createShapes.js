@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import opencascade from "opencascade.js/dist/opencascade.full.js"
-import opencascadeWasm from "opencascade.js/dist/opencascade.full.wasm?url"
+import opencascade from "../node_modules/opencascade.js/dist/opencascade.full.js"
+import opencascadeWasm from "../node_modules/opencascade.js/dist/opencascade.full.wasm?url"
 import { visualizeShapes } from "./visualize.js"; 
 /*Create Object and Update Statuses*/
 export async function createCube(lengthCube){

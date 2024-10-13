@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
-import opencascade from "opencascade.js/dist/opencascade.full.js"
-import opencascadeWasm from "opencascade.js/dist/opencascade.full.wasm?url"
-import { visualizeShapes } from "./visualize.js"; 
+//import opencascade from "opencascade.js/dist/opencascade.full.js"
+//import opencascadeWasm from "opencascade.js/dist/opencascade.full.wasm?url"
+//import { visualizeShapes } from "./visualize.js"; 
 import {createCube, createSphere, createCone, createPyramid, createBox, createCylinder, createTorus, createWedge/*, createCustom*/} from './createShapes.js'
 import "@google/model-viewer";
 
@@ -219,7 +219,7 @@ function CadBot(props) {
                 })
             }
             else if (curShape === "custom"){
-                
+
             }
         }
     }, [status])
