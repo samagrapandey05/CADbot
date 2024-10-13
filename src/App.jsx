@@ -2,18 +2,35 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Display from './Display.jsx'
-import TextBox from './TextBox.jsx'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; 
+//import Display from './Display.jsx'
+//import TextBox from './TextBox.jsx'
+import Header from './Header.jsx'
+import Home from './Home.jsx'
+import SignUp from './SignUp.jsx'
+import CADbot from './CADbot.jsx'
+import About from './About.jsx'
+
 
 function App() {
   const [messages, setMessages] = useState([])
+  const [curUser, setCurUser] = useState(null)
+  const [loggedIn, setLoggedIn] = useState(false)
   const [generatingOutput, setGeneratingOutput] = useState(false)
 
   return (
-    <div>
-      <Display messages={messages} setGeneratingOutput={setGeneratingOutput}/>
-      <TextBox setMessages={setMessages} messages={messages} generatingOutput={generatingOutput}/>
-    </div>
+    <Router>
+      <Header loggedIn={loggedIn} setLoggedIn={setLoggedIn} setCurUser={setCurUser}/>
+      <Routes>
+        <Route path="/" index element={<Home loggedIn={loggedIn} setLoggedIn={setLoggedIn} setCurUser={setCurUser}/>}/>
+        {/*<Route path="/sign-up" element={<SignUp loggedIn={loggedIn} setLoggedIn={setLoggedIn} curUser = {curUser} setCurUser={setCurUser}/>} />*/}
+        <Route path="/cadbot" element={(loggedIn===true) ? <CADbot user = {curUser} /> : <SignUp loggedIn={loggedIn} setLoggedIn={setLoggedIn} curUser = {curUser} setCurUser={setCurUser}/>} />
+        <Route path="/about" element={<About/>}/>
+        {/*<Route path="/sign-in" element={loggedIn ? <Profile retrieveDatabase={retrieveDatabase} user={user} updateUser={updateUser} deleteUser={deleteUser} setLoggedIn={setLoggedIn} setTriggeredLogout={setTriggeredLogout} /> : <SignIn retrieveDatabase={retrieveDatabase} user={user} setLoggedIn={setLoggedIn} />} />
+        <Route path="/profile" element={loggedIn ? <Profile retrieveDatabase={retrieveDatabase} user={user} updateUser={updateUser} deleteUser={deleteUser} setLoggedIn={setLoggedIn} setTriggeredLogout={setTriggeredLogout} /> : <NotFound />} />
+        <Route path='*' element={<NotFound />} />*/}
+      </Routes>
+    </Router>
   )
 }
 
