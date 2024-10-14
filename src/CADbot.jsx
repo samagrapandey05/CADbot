@@ -278,10 +278,7 @@ function CadBot(props) {
             <h1 className="curQueryTitle">Showing Query Result</h1>
             :
             (status === 2 && curShape === "custom") ?
-            <div>
             <h1 className="curQueryTitle">Error: Unable to Generate Relevant Model.</h1>
-            <p className='errorMessage'>We apologize for the inconvenience. CADBot is currently in demo version, and custom shape generation capabilities are limited. We are working on refining this feature, and a refined version is coming soon!</p>
-            </div>
             :
             <h1 className="curQueryTitle">Error: Invalid Dimensions</h1> 
             }
@@ -393,12 +390,12 @@ function CadBot(props) {
             (status === 0 && queryStatus === 1 && numViewing < 0 && curShape === "torus") ?
             <div className='divEnterDimension'>
                 <form onSubmit={handleQuerySubmit} className='dimensionForm'>
-                    <label className='dimensionLabel'> Enter R1:
+                    <label className='dimensionLabel'> Enter Radius 1:
                         <input type = "text" value = {dim.r1} onChange={(e)=>setDim(dim => ({...dim, r1: e.target.value}))} className='dimTextbox'/>
                     </label>
                 </form>
                 <form onSubmit={handleQuerySubmit} className='dimensionForm'>
-                    <label className='dimensionLabel'> Enter R2:
+                    <label className='dimensionLabel'> Enter Radius 2:
                         <input type = "text" value = {dim.r2} onChange={(e)=>setDim(dim => ({...dim, r2: e.target.value}))} className='dimTextbox'/>
                     </label>
                 </form>
@@ -453,6 +450,9 @@ function CadBot(props) {
             </div>
             <a className="DownloadLink" href={shapeModel} download="model.glb">Download File</a>
             </div>
+            :
+            (status === 2 && curShape === "custom") ?
+            <p className='errorMessage'>We apologize for the inconvenience. CADBot is currently in demo version, and custom shape generation capabilities are limited. We are working on refining this feature, and a refined version is coming soon!</p>
             :
             null
             }
