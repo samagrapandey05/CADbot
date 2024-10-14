@@ -167,7 +167,7 @@ h1 {
   flex-direction: column;
   align-items: stretch;
   justify-content: baseline;
-  background-color: #EFEFE9;
+  background-color: #314F4F;
 }
 .Header{
   margin: 0;
@@ -180,7 +180,7 @@ h1 {
   flex-direction: row;
   align-items: center;
   justify-content: baseline;
-  background-color: #EFEFE9;
+  background-color: #314F4F;
   padding-left: 5%;
 }
 .headerRight{
@@ -191,7 +191,7 @@ h1 {
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  background-color: #EFEFE9;
+  background-color: #314F4F;
 }
 .HeaderButtons{
   background-color: transparent;
@@ -209,7 +209,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: baseline;
-  background-color: #EFEFE9;
+  background-color: #314F4F;
 }
 .homeCAD {
   margin: 0;
@@ -251,12 +251,12 @@ h1 {
   flex-direction: column;
   align-items: stretch;
   justify-content: baseline;
-  background-color: #EFEFE9;
+  background-color: #314F4F;
 }
 .SignUpBody{
   margin: 0;
   position: absolute;
-  background-color: #EFEFE9;
+  background-color: #314F4F;
   top: 10%;
   left: 0;
   height: 90%;
@@ -335,7 +335,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #EFEFE9;
+  background-color: #314F4F;
 }
 .aboutTitle{
   color: black;
@@ -349,7 +349,7 @@ h1 {
 .cadbotBody{
   margin: 0;
   position: absolute;
-  background-color: #EFEFE9;
+  background-color: #314F4F;
   top: 10%;
   left: 0;
   height: 90%;
