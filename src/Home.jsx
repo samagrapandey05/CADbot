@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom";
 function Home(props) {
-    let navigate = useNavigate(); 
+    const navigateHome = useNavigate(); 
     const routeSignup = () =>{ 
-        let path = '/cadbot'; 
-        navigate(path);
+        const pathCadbot = '/cadbot'; 
+        navigateHome(pathCadbot);
     }
     return (
 

@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
 function Header(props) {
-  let navigate = useNavigate(); 
+  const navigate = useNavigate(); 
   const routeSignup = () =>{ 
-      let path = '/cadbot'; 
+      const path = '/cadbot'; 
       navigate(path);
   }
   const logOut = ()=>{
@@ -10,16 +10,18 @@ function Header(props) {
       props.setCurUser(null)
   }
   const routeAbout = () =>{ 
-      let path = '/about'; 
-      navigate(path);
+    console.log("Into about")  
+    const path = '/about';
+    console.log(path)
+    navigate(path);
   }
   const routeHome = () =>{ 
-      let path = '/'; 
+      const path = '/'; 
       navigate(path);
   }
   return (
-    <div className = "Header" onClick={routeHome}>
-      <button className="HeaderButtons">
+    <div className = "Header">
+      <button className="HeaderButtons"  onClick={routeHome}>
         CADBot v1
       </button>
 
