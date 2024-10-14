@@ -6,6 +6,8 @@ function Home(props) {
         navigateHome(pathCadbot);
     }
     return (
+      /*<div>*/
+      
       <div className="homeBody">
         <h1 className="homeBodyTitle">From Thoughts to STL Files, in Seconds</h1>
         {
@@ -19,7 +21,7 @@ function Home(props) {
             </button>
         }
       </div>
-      
+      /*</div>*/
     )
   }
   

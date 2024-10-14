@@ -19,11 +19,11 @@ function App() {
 
   return (
     <Router>
-      <Header loggedIn={loggedIn} setLoggedIn={setLoggedIn} setCurUser={setCurUser} setPrevQueries = {setPrevQueries}/>
+      <Header loggedIn={loggedIn} setLoggedIn={setLoggedIn} setCurUser={setCurUser}/>
       <Routes>
         <Route path="/" index element={<Home loggedIn={loggedIn} setLoggedIn={setLoggedIn} setCurUser={setCurUser}/>}/>
         {/*<Route path="/sign-up" element={<SignUp loggedIn={loggedIn} setLoggedIn={setLoggedIn} curUser = {curUser} setCurUser={setCurUser}/>} />*/}
-        <Route path="/cadbot" element={(loggedIn===true) ? <CADbot user = {curUser} /> : <SignUp loggedIn={loggedIn} setLoggedIn={setLoggedIn} curUser = {curUser} setCurUser={setCurUser} prevQueries={prevQueries} setPrevQueries = {setPrevQueries}/>} />
+        <Route path="/cadbot" element={(loggedIn===true) ? <CADbot user = {curUser} /> : <SignUp loggedIn={loggedIn} setLoggedIn={setLoggedIn} curUser = {curUser} setCurUser={setCurUser}/>} />
         <Route path="/about" element={<About/>}/>
         {/*<Route path="/sign-in" element={loggedIn ? <Profile retrieveDatabase={retrieveDatabase} user={user} updateUser={updateUser} deleteUser={deleteUser} setLoggedIn={setLoggedIn} setTriggeredLogout={setTriggeredLogout} /> : <SignIn retrieveDatabase={retrieveDatabase} user={user} setLoggedIn={setLoggedIn} />} />
         <Route path="/profile" element={loggedIn ? <Profile retrieveDatabase={retrieveDatabase} user={user} updateUser={updateUser} deleteUser={deleteUser} setLoggedIn={setLoggedIn} setTriggeredLogout={setTriggeredLogout} /> : <NotFound />} />
