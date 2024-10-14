@@ -43,10 +43,10 @@ function Home(props) {
     }
     return (
       <div className="homeBody">
-        <div className="homeCAD">
+        <div className="homeCAD" onMouseMove={handleMouseMove}>
             <model-viewer src={modelURL} camera-controls enable-pan id="homeViewer"/>
         </div>
-        <h1 className="homeBodyTitle">From Thoughts to CAD Files, in Seconds</h1>
+        <h1 className="homeBodyTitle">FROM THOUGHTS TO CAD FILES <br/> IN SECONDS</h1>
       {/*<div className="homeBody">
         <h1 className="homeBodyTitle">From Thoughts to STL Files, in Seconds</h1>
         {
