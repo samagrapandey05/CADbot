@@ -9,8 +9,23 @@ function Home(props) {
     useEffect(()=>{
         opencascade({locateFile: () => opencascadeWasm,}).then((oc)=>{
             const box = new oc.BRepPrimAPI_MakeBox_2(5, 5, 5).Shape();
-            //const torus = new oc.BRepPrimAPI_MakeTorus_1(5, 3).Shape();
-            //const cone = new oc.BRepPrimAPI_MakeCone_1(radius, null, height).Shape();
+            /*const torus = new oc.BRepPrimAPI_MakeTorus_1(5, 3).Shape();
+            const cone = new oc.BRepPrimAPI_MakeCone_1(radius, null, height).Shape();
+            // Create a translation vector
+            const translationVectorTorus = new oc.gp_Vec_4(10, 0, 0);
+            const tranlsationVectorCone = new oc.gp_Vec_4(-5, 0, 0);
+            // Create a transformation object
+            const transformTorus = new oc.BRepBuilderAPI_Transform(torus, new oc.gp_Trsf());
+            const transformCone = new oc.BRepBuilderAPI_Transform(cone, new oc.gp_Trsf());
+
+            // Set the translation
+            transformTorus.SetTranslation(translationVectorTorus);
+            transformCone.SetTranslation(tranlsationVectorCone);
+
+            // Apply the transformation to the shape
+            const translatedTorus = transformTorus.Shape();
+            const translatedCone = transformCone.Shape();*/
+
             const res = visualizeShapes(oc, box);
             setModelURL(res);
             console.log(res)

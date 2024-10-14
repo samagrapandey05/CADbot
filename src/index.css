@@ -274,21 +274,22 @@ h1 {
   justify-content: center;
   align-items: center;
   width: 100%;
+  height:30%;
 }
 .loginForm{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: baseline;
   align-items: center;
-  width: 70%;
 }
 .loginLabel{
   width: 100%;
   font-size: 1.5em;
   color: black;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
 }
 .textbox {
   height: 1.5em;
