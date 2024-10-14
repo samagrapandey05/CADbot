@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 //import opencascade from "opencascade.js/dist/opencascade.full.js"
 //import opencascadeWasm from "opencascade.js/dist/opencascade.full.wasm?url"
 //import { visualizeShapes } from "./visualize.js"; 
-import {createCube, createSphere, createCone, createPyramid, createBox, createCylinder, createTorus, createWedge/*, createCustom*/} from './createShapes.js'
+import {createCube, createSphere, createCone, createPyramid, createBox, createCylinder, createTorus, createWedge, createCustom} from './createShapes.js'
 import "../node_modules/@google/model-viewer";
 
 function CadBot(props) {
@@ -219,7 +219,18 @@ function CadBot(props) {
                 })
             }
             else if (curShape === "custom"){
-
+                /*createCustom(dim).then((res)=>{
+                    console.log("Result", res);
+                    if (res == undefined || res.code === false){
+                        setStatus(2);
+                    }
+                    else{
+                        setShapeModel(res.result);
+                        setPrevQueries([...prevQueries, {number: prevQueries.length, shape:curShape, dimension:dim, shapeModel: res.result}])
+                    }
+                    console.log(shapeModel)
+                })*/
+                setStatus(2);
             }
         }
     }, [status])
@@ -265,6 +276,12 @@ function CadBot(props) {
             :
             (status === 1 && shapeModel !== null) ? 
             <h1 className="curQueryTitle">Showing Query Result</h1>
+            :
+            (status === 2 && curShape === "custom") ?
+            <div>
+            <h1 className="curQueryTitle">Error: Unable to Generate Relevant Model.</h1>
+            <p className='dimensionLabel'>We apologize for the inconvenience. CADBot is currently in demo version, and custom shape generation capabilities are limited. We are working on refining this feature, and a refined version is coming soon!</p>
+            </div>
             :
             <h1 className="curQueryTitle">Error: Invalid Dimensions</h1> 
             }
@@ -418,7 +435,7 @@ function CadBot(props) {
             (status === 0 && queryStatus === 1 && numViewing < 0 && curShape === "custom") ?
             <div className='divEnterDimension'>
                 <form onSubmit={handleQuerySubmit} className='dimensionForm'>
-                    <label className='dimensionLabel'> Enter Radius or Length:
+                    <label className='dimensionLabel'> Enter Description:
                         <input type = "text" value = {dim} onChange={(e)=>setDim(e.target.value)} className='dimTextbox'/>
                     </label>
                     <input type='submit' className='dimensionSubmit'/>
