@@ -245,17 +245,17 @@ function CadBot(props) {
             {/*<div className="Add_Element_Unclicked" onClick={newElem}>
                 Add New Query
             </div>*/}
-            <div className="Add_Element_Unclicked" onClick={newElem}>
+            <button className="Add_Element_Unclicked" onClick={newElem}>
                 Add New Query
-            </div>
-            <div className="previousQueries">
+            </button>
+            
                 {(prevQueries.length > 0) ? 
-                <ul>
-                    {[...prevQueries].map((d) => <button onClick={()=>viewPrevQuery(d.number)} key={d.number}>View Query #{d.number}</button>)} 
+                <ul className="previousQueries">
+                    {[...prevQueries].map((d) => <button className="previousQueryElem" onClick={()=>viewPrevQuery(d.number)} key={d.number}>View Query #{d.number}</button>)} 
                 </ul>
                 : 
-                <p>No Previous Queries to Display</p>}
-            </div>
+                null}
+            
         </div>
 
         <div className="curQuery">

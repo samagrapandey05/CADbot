@@ -34,6 +34,7 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
   color: black;
+  font-family:cursive;
 }
 /*.displayBackground{
   height: 90%;
@@ -166,7 +167,7 @@ h1 {
   flex-direction: column;
   align-items: stretch;
   justify-content: baseline;
-  background-color: beige;
+  background-color: #EFEFE9;
 }
 .Header{
   margin: 0;
@@ -179,7 +180,7 @@ h1 {
   flex-direction: row;
   align-items: center;
   justify-content: baseline;
-  background-color: beige;
+  background-color: #EFEFE9;
   padding-left: 5%;
 }
 .headerRight{
@@ -188,7 +189,7 @@ h1 {
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  background-color: beige;
+  background-color: #EFEFE9;
   margin-right: 10%;
 }
 .HeaderButtons{
@@ -207,7 +208,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: baseline;
-  background-color: beige;
+  background-color: #EFEFE9;
 }
 .homeCAD {
   margin: 0;
@@ -249,12 +250,12 @@ h1 {
   flex-direction: column;
   align-items: stretch;
   justify-content: baseline;
-  background-color: beige;
+  background-color: #EFEFE9;
 }
 .SignUpBody{
   margin: 0;
   position: absolute;
-  background-color: beige;
+  background-color: #EFEFE9;
   top: 10%;
   left: 0;
   height: 90%;
@@ -333,7 +334,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: beige;
+  background-color: #EFEFE9;
 }
 .aboutTitle{
   color: black;
@@ -347,7 +348,7 @@ h1 {
 .cadbotBody{
   margin: 0;
   position: absolute;
-  background-color: beige;
+  background-color: #EFEFE9;
   top: 10%;
   left: 0;
   height: 90%;
@@ -360,20 +361,22 @@ h1 {
 .sideBar{
   top: 0;
   left: 0;
-  width: 20%;
+  width: 15%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: baseline;
-  border: 3px solid black;
+  border: transparent;
+  border-right: 3px solid black;
 }
 .curQuery{
   top: 0;
-  left: 20%;
-  width: 80%;
+  left: 15%;
+  width: 85%;
   height: 100%;
-  border: 3px solid black;
+  border: transparent;
+  border-left: 3px solid black;
   background-color: transparent;
   display: flex;
   flex-direction: column;
@@ -381,35 +384,37 @@ h1 {
   justify-content: center;
 }
 .Add_Element_Unclicked{
-  top: 0;
+  /*top: 0;
   left: 0;
   width: 100%;
   height: 5%;
   font-size: 1em;
   background-color: transparent;
-  color: black;
-}
-.Add_Element_Clicked{
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 5%;
-  font-size: 1em;
-  background-color: rgb(67, 163, 240);
-  color: black;
+  color: black;*/
+  background-color: green;
 }
 .previousQueries{
   top: 5%;
   left: 0;
   width: 100%;
   height: 95%;
-  border: 3px solid black;
+  margin: 0;
+  padding: 0;
   background-color: transparent;
   display: flex;
-  flex-direction: column;
-  justify-content: baseline;
-  overflow-y: scroll;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  align-items: stretch;
+  overflow-y: auto;
   color: black;
+}
+.previousQueryElem{
+  background-color: transparent;
+  color: black;
+}
+/* CADBot Right Panel */
+.curQueryTitle{
+
 }
 
 button {
