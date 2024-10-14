@@ -280,7 +280,7 @@ function CadBot(props) {
             (status === 2 && curShape === "custom") ?
             <h1 className="curQueryTitle">Error: Unable to Generate Relevant Model.</h1>
             :
-            <h1 className="curQueryTitle">Error: Invalid Dimensions</h1> 
+            <h1 className="curQueryTitle">Error: Invalid Dimensions. Must Be a Number.</h1> 
             }
 
             {(status === 0 && queryStatus === 0 && numViewing < 0 ) ? 
