@@ -180,6 +180,7 @@ h1 {
   align-items: center;
   justify-content: baseline;
   background-color: beige;
+  padding-left: 5%;
 }
 .headerRight{
   width: 100%;
@@ -192,7 +193,7 @@ h1 {
 }
 .HeaderButtons{
   background-color: transparent;
-  border-color: black;
+  border-color: transparent;
   color: black;
 }
 .homeBody{

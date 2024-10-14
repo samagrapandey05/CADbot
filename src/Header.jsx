@@ -21,10 +21,9 @@ function Header(props) {
   }
   return (
     <div className = "Header">
-      <button className="HeaderButtons"  onClick={routeHome}>
+      <button className="HeaderButtons"  onClick={routeHome} id = "Logo">
         CADBot v1
       </button>
-
 
       <div className="headerRight">
       <button className="HeaderButtons" onClick={routeSignup}>
