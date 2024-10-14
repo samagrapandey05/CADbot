@@ -280,13 +280,13 @@ function CadBot(props) {
             (status === 2 && curShape === "custom") ?
             <div>
             <h1 className="curQueryTitle">Error: Unable to Generate Relevant Model.</h1>
-            <p className='dimensionLabel'>We apologize for the inconvenience. CADBot is currently in demo version, and custom shape generation capabilities are limited. We are working on refining this feature, and a refined version is coming soon!</p>
+            <p className='errorMessage'>We apologize for the inconvenience. CADBot is currently in demo version, and custom shape generation capabilities are limited. We are working on refining this feature, and a refined version is coming soon!</p>
             </div>
             :
             <h1 className="curQueryTitle">Error: Invalid Dimensions</h1> 
             }
 
-            {(status === 0 && queryStatus === 0 && numViewing < 0) ? 
+            {(status === 0 && queryStatus === 0 && numViewing < 0 ) ? 
             <div className='shapeButtons'>
                 <button onClick={addCube} className='shapeButton'>Cube</button>
                 <button onClick={addSphere} className='shapeButton'>Sphere</button>
