@@ -420,6 +420,84 @@ h1 {
 .errorMessage{
   color: black
 }
+.shapeButtons{
+
+}
+.shapeButton{
+
+}
+.divEnterDimension{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30%;
+}
+.dimensionForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+}
+.dimensionLabel{
+  width: 100%;
+  font-size: 1.5em;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+}
+.dimTextbox{
+  height: 1.5em;
+  background-color: transparent;
+  border: 3px solid black;
+  color: black;
+}
+.dimensionSubmit{
+  border-radius: 20px;
+  font-size: 1.5em;
+  background-color: transparent;
+  border-color: black;
+  color: black;
+  border: 3px solid;
+  padding: 0.6em 1.2em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.dimensionSubmit:hover{
+  border-color: #646cff;
+}
+.dimensionCancel{
+  border-radius: 20px;
+  font-size: 1.5em;
+  background-color: transparent;
+  border-color: black;
+  color: black;
+}
+.viewingModel{
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+  height: 40%;
+  width: 100%;
+}
+.modelWrapper{
+  height: 80%;
+  width: 50%;
+  background-color: black;
+}
+#displayModel {
+  height: 100%;
+  width: auto;
+  border: 3px solid black;
+}
+.DownloadLink{
+
+}
 
 button {
   border-radius: 8px;

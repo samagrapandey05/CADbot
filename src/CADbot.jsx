@@ -338,7 +338,7 @@ function CadBot(props) {
                         <input type = "text" value = {dim.height} onChange={(e)=>setDim(dim => ({...dim, height: e.target.value}))} className='dimTextbox'/>
                     </label>
                 </form>
-                <button onClick={handleQuerySubmit}>Submit</button>
+                <button onClick={handleQuerySubmit} className='dimensionSubmit'>Submit</button>
                 <button onClick={newElem} className='dimensionCancel'>Cancel</button>
             </div>
             :
@@ -354,7 +354,7 @@ function CadBot(props) {
                         <input type = "text" value = {dim.height} onChange={(e)=>setDim(dim => ({...dim, height: e.target.value}))} className='dimTextbox'/>
                     </label>
                 </form>
-                <button onClick={handleQuerySubmit}>Submit</button>
+                <button onClick={handleQuerySubmit} className='dimensionSubmit'>Submit</button>
                 <button onClick={newElem} className='dimensionCancel'>Cancel</button>
             </div>
             :
@@ -370,7 +370,7 @@ function CadBot(props) {
                         <input type = "text" value = {dim.height} onChange={(e)=>setDim(dim => ({...dim, height: e.target.value}))} className='dimTextbox'/>
                     </label>
                 </form>
-                <button onClick={handleQuerySubmit}>Submit</button>
+                <button onClick={handleQuerySubmit} className='dimensionSubmit'>Submit</button>
                 <button onClick={newElem} className='dimensionCancel'>Cancel</button>
             </div>
             :
@@ -386,7 +386,7 @@ function CadBot(props) {
                         <input type = "text" value = {dim.height} onChange={(e)=>setDim(dim => ({...dim, height: e.target.value}))} className='dimTextbox'/>
                     </label>
                 </form>
-                <button onClick={handleQuerySubmit}>Submit</button>
+                <button onClick={handleQuerySubmit} className='dimensionSubmit'>Submit</button>
                 <button onClick={newElem} className='dimensionCancel'>Cancel</button>
             </div>
             :
@@ -402,7 +402,7 @@ function CadBot(props) {
                         <input type = "text" value = {dim.r2} onChange={(e)=>setDim(dim => ({...dim, r2: e.target.value}))} className='dimTextbox'/>
                     </label>
                 </form>
-                <button onClick={handleQuerySubmit}>Submit</button>
+                <button onClick={handleQuerySubmit} className='dimensionSubmit'>Submit</button>
                 <button onClick={newElem} className='dimensionCancel'>Cancel</button>
             </div>
             :
@@ -428,7 +428,7 @@ function CadBot(props) {
                         <input type = "text" value = {dim.maxLength} onChange={(e)=>setDim(dim => ({...dim, maxLength: e.target.value}))} className='dimTextbox'/>
                     </label>
                 </form>
-                <button onClick={handleQuerySubmit}>Submit</button>
+                <button onClick={handleQuerySubmit} className='dimensionSubmit'>Submit</button>
                 <button onClick={newElem} className='dimensionCancel'>Cancel</button>
             </div>
             :
@@ -447,9 +447,11 @@ function CadBot(props) {
             null
             :
             ((status === 1 || numViewing >= 0)) ?
-            <div>
-            <model-viewer src={shapeModel} camera-controls enable-pan />
-            <a href={shapeModel} download="model.glb">Download File</a>
+            <div className='viewingModel'>
+            <div className='modelWrapper'>
+            <model-viewer src={shapeModel} camera-controls enable-pan id="displayModel"/>
+            </div>
+            <a className="DownloadLink" href={shapeModel} download="model.glb">Download File</a>
             </div>
             :
             null
