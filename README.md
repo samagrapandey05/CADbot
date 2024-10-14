@@ -1,8 +1,5 @@
-# React + Vite
+# Welcome to CADBot
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The deployed website can be found here: https://cadbot.netlify.app/
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+In the current iteration of the project, you can generate primitives of variable dimensions, and download the resulting file. The file can also be interacted with directly through the embedded file viewer in the browser.
